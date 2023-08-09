@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.cos.blogapp.domain.user.User;
 import com.cos.blogapp.domain.user.UserRepository;
+import com.cos.blogapp.util.SHA;
 
 import lombok.RequiredArgsConstructor;
 
@@ -19,6 +20,8 @@ public class UserController {
 	@PostMapping("/join")
 	public String join(JoinReqDto dto) {
 		
+		String encPassword = SHA.encrypt(dto.getPassword());
+		dto.setPassword(encPassword);
 		User user = dto.toEntity();
 		userRepository.save(user);
 		
