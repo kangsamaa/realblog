@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
-<%@ include file="../layout/header.jsp"%>
+<%@ include file="/WEB-INF/layout/header.jsp"%>
 <div class="container p-4 w-25 bg-light rounded shadow">
   <h5 style="font-family: 'IBM Plex Sans KR', sans-serif; margin-bottom: 30px;">로그인</h5>
   <form>
@@ -13,4 +13,4 @@
     <button type="submit" class="btn btn-primary col-md-4" style="margin-top: 30px;">로그인</button>
   </form>
 </div>
-<%@ include file="../layout/footer.jsp"%>
+<%@ include file="/WEB-INF/layout/footer.jsp"%>
